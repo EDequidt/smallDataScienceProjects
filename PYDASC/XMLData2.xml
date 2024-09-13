@@ -1,0 +1,22 @@
+<MyDataset>
+    <Record>
+        <Nombre>1</Nombre>
+        <Chaine>Primo</Chaine>
+        <Booleen>True</Booleen>
+    </Record>
+    <Record>
+        <Nombre>2</Nombre>
+        <Chaine>Secundo</Chaine>
+        <Booleen>False</Booleen>
+    </Record>
+    <Record>
+        <Nombre>3</Nombre>
+        <Chaine>Tertio</Chaine>
+        <Booleen>True</Booleen>
+    </Record>
+	<Record>
+        <Nombre>3</Nombre>
+        <Chaine>Tertio</Chaine>
+        <Booleen>True</Booleen>
+    </Record>
+</MyDataset>

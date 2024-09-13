@@ -1,0 +1,78 @@
+=== LISEZMOI PYDASC =============================
+
+Ce fichier contient des correctifs et des compléments techniques 
+au sujet de certains projets d'exemple.
+
+===== Chapitre 4 Colab
+Fichier externe à télécharger :
+
+https://colab.research.google.com/notebooks/welcome.ipynb
+
+
+===== Chapitre 8
+Mise en place de NLTK :
+http://www.nltk.org/install.html
+
+Deux étapes : installer le logiciel, puis installer les jeux de données.
+
+1) Vous devez d'abord mettre en place un environnement virtuel Python
+Le plus simple est de profiter de l'installation d'Anaconda 
+https://www.anaconda.com/distribution/
+
+2) Installer le logiciel NLTK
+2.a) Sous Mac/Unix
+run pip install --user -U nltk
+(si pas encore installé) run pip install --user -U numpy
+run python 
+type import nltk
+
+2.b) Sous Windows
+(si pas encore installé) https://www.scipy.org/scipylib/download.html
+http://pypi.python.org/pypi/nltk
+
+Pou tester l'installation, démarrez Python puis
+type import nltk
+
+3) Installer les données
+Sur la ligne de commande :
+python -m nltk.downloader popular
+
+Dans l'interpréteur Python :
+import nltk; nltk.download(‘popular’)
+
+Voir aussi http://www.nltk.org/data.html
+
+Liste de mots vides en français : nous fournissons le fichier stopFR.txt, mais les résultats ne sont pas très précis.
+
+ERRATA : Chapitre 8 page 157, un saut de paragraphe abscons a séparé .html de son nom de fichier.
+
+===== Chapitre 11
+Section géographique : l'exemple requiert Basemap qui pose actuellement problème.
+1) Si la commande demandant d'installer la version 1.1.0 de Basemap échoue, essayez sans numéro de version:
+conda install -c conda-forge basemap
+2) De même, pour proj4, si la version demandée n'est plus disponible, essayez sans numéro:
+conda install -c conda-forge proj4
+
+Ces approximations entrainent un problème pour trouver le fichier nommé epsg. 
+Les commentaires dans le calepin donnent une piste qui résoudra le problème lorsque la librairie proj4 sera corrigée.
+En attendant, vous copiez le fichier epsg fourni à l'endroit attendu.
+
+===== Chapitre 14
+Le fichier de base de données à installer se trouve ici :
+http://files.grouplens.org/datasets/movielens/ml-1m.zip
+
+===== Chapitre 15 : ERRATA !
+En page 311, l'exemple dans le livre contient deux occurrences d'une erreur de nom de variable :
+  if row+batch < len(Cx):
+    feed = Cx[row:row+batch,:]
+
+La variable nommée batch doit se lire taille_lot dans les lignes 6 et 7:
+  if row+taille_lot < len(Cx):
+    feed = Cx[row:row+taille_lot,:]
+
+===== Chapitre 19
+Patience dans les deux chapitres 19 et 20 pour certains exemples.
+Ceux utilisant timeit peuvent demander 10 mn, ne croyez pas que le programme est bloqué.
+Ceux avec la forêt aléatoire et les hyperparamètres sont assez longs aussi.
+
+=== FIN LISEZMOI PYDASC =============================
